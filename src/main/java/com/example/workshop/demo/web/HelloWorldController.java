@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloWorldController {
 
     @RequestMapping("/hello")
-    public String sayHello(@RequestParam(value = "name") String name) {
-        return String.format("Hello, " + name + "!");
+    public String sayHello() {
+        return String.format("Hello, " + System.getenv("workshop") + "!");
     }
 }
